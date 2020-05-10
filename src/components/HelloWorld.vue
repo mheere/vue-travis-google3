@@ -10,7 +10,7 @@
         rel="noopener"
       >vue-cli documentation</a>.
     </p>
-    <h3>This is a Docker test 2</h3>
+    <h3>Am I going to be shown as a working website on GitHub Pages next?</h3>
   </div>
 </template>
 
