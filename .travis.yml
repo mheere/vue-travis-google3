@@ -1,0 +1,6 @@
+language: generic
+sudo: required
+
+script:
+    - npm run test:unit -- --coverage
+
