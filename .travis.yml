@@ -5,8 +5,8 @@ services:
     - docker
 
 before_install:
-    #- docker build -t abc1 -f Dockerfile.dev .
-    - docker build -t abc1 .
+    - docker build -t abc1 -f Dockerfile-build.dev .
+    #- docker build -t abc1 .
 
 script:
     - docker run abc1 npm run test:unit -- --coverage
