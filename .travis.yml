@@ -8,5 +8,5 @@ before_install:
     - docker build -t abc1 -f Dockerfile.dev .
 
 script:
-    - docker run abc1 npm run test -- --coverage
+    - docker run abc1 npm run test:unit -- --coverage
 
