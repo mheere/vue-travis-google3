@@ -1,5 +1,3 @@
-sudo: false
-
 language: node_js
 
 node_js:
@@ -9,16 +7,14 @@ node_js:
 # install:
 #     - npm ci
 
-# before_install:
-#     - docker build -t abc1 -f Dockerfile-build.dev .
-#     #- docker build -t abc1 .
-
-# script:
-#     - docker run abc1 npm run test:unit -- --coverage
+before_install:
+    - docker build -t abc1 -f Dockerfile.dev .
 
 script:
+    - docker run abc1 npm run test:unit -- --coverage
+
+before_deploy:
     - npm run build
-    #- npm run test:unit -- --coverage
 
 deploy:
     provider: pages
